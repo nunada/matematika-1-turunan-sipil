@@ -59,12 +59,13 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGL.loader.js";
+      var cacheBust = "?v=20261116a";
+      var loaderUrl = buildUrl + "/WebGL.loader.js" + cacheBust;
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/WebGL.data",
-        frameworkUrl: buildUrl + "/WebGL.framework.js",
-        codeUrl: buildUrl + "/WebGL.wasm",
+        dataUrl: buildUrl + "/WebGL.data" + cacheBust,
+        frameworkUrl: buildUrl + "/WebGL.framework.js" + cacheBust,
+        codeUrl: buildUrl + "/WebGL.wasm" + cacheBust,
         streamingAssetsUrl: "StreamingAssets",
 
         // If you have a custom web site structure, or want to place multiple Unity build instances on the same page,
